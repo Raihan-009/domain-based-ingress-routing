@@ -1,10 +1,10 @@
 // src/services/api.js
-const API_URL = "https://info.ryuzaki.me/nav";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const apiService = {
   async getServices() {
     try {
-      const response = await fetch(`${API_URL}/api/services`);
+      const response = await fetch(`${API_URL}/services`);
       if (!response.ok) throw new Error('Network response was not ok');
       return await response.json();
     } catch (error) {
@@ -15,7 +15,7 @@ export const apiService = {
 
   async getService(id) {
     try {
-      const response = await fetch(`${API_URL}/api/services/${id}`);
+      const response = await fetch(`${API_URL}/services/${id}`);
       if (!response.ok) throw new Error('Network response was not ok');
       return await response.json();
     } catch (error) {
@@ -26,7 +26,7 @@ export const apiService = {
 
   async submitContact(formData) {
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(`${API_URL}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,5 @@
 img:=nav-app
-tag:=v1.6.1
+tag:=v1.7.6
 user:=poridhi
 name:=nav-container
 

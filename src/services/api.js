@@ -1,5 +1,6 @@
 // src/services/api.js
 const API_URL = import.meta.env.VITE_API_URL;
+// console.log(API_URL)
 
 export const apiService = {
   async getServices() {
